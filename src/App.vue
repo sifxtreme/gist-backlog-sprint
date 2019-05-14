@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <div class="container">
-      <h2>Backlog</h2>
+      <h1>Backlog</h1>
       <div v-html="backlog"></div>
     </div>
     <div class="container">
-      <h2>Current Sprint</h2>
+      <h1>Current Sprint</h1>
       <div v-html="currentSprint"></div>
     </div>
   </div>
@@ -47,11 +47,13 @@ export default {
 
 <style>
 html,
-body {
+body,
+#app,
+.container {
   height: 100%;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   color: white;
-  margin-top: 10px;
+  margin: 0;
   background-color: #424242;
 }
 a {
@@ -64,5 +66,9 @@ a {
 
 .container {
   flex: 50%;
+  overflow: auto;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-left: 1px solid black;
 }
 </style>
